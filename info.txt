@@ -1,0 +1,11 @@
+1) folder kafkaServerbezpośrednio na parencie partycji (np. C:/)
+error: "Input line is too long"
+
+$ cd bin/windows
+$ zookeeper-server-start.bat ../../config/zookeeper.properties
+$ kafka-server-start.bat ../../config/server.properties
+
+
+# The below will NOT work (explanation is above)
+$ cd bin/windows
+$ zookeeper-server-start.bat
