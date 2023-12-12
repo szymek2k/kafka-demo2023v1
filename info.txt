@@ -1,3 +1,4 @@
+https://www.youtube.com/watch?v=KQDTtvZMS9c- Kafka tutorial
 1) folder kafkaServerbezpośrednio na parencie partycji (np. C:/)
 error: "Input line is too long"
 
@@ -9,3 +10,15 @@ $ kafka-server-start.bat ../../config/server.properties
 # The below will NOT work (explanation is above)
 $ cd bin/windows
 $ zookeeper-server-start.bat
+
+2) Kafka config
+https://stackoverflow.com/questions/64739769/kafkaexception-class-is-not-an-instance-of-org-apache-kafka-common-serializatio
+spring.kafka.consumer.bootstrap-servers=localhost:8888
+spring.kafka.consumer.group-id=message
+spring.kafka.consumer.auto-offset-reset=earliest
+spring.kafka.consumer.key-deserializer=org.apache.kafka.common.serialization.StringDeserializer
+spring.kafka.consumer.value-deserializer=org.apache.kafka.common.serialization.StringDeserializer
+
+spring.kafka.producer.bootstrap-servers=localhost:8888
+spring.kafka.producer.key-serializer=org.apache.kafka.common.serialization.StringSerializer (!!!!!!)
+spring.kafka.producer.value-serializer=org.apache.kafka.common.serialization.StringSerializer (!!!!!!)
