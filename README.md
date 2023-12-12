@@ -1,0 +1,1 @@
+Simple application using SpringBoot and Apache Kafka. Based on  Bouali Ali tutorial named "Apache Kafka Tutorial with Spring Boot Reactive & WebFlux | Kafka Tutorial" https://www.youtube.com/watch?v=KQDTtvZMS9c
