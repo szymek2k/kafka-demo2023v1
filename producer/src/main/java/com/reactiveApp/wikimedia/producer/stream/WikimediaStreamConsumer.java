@@ -19,6 +19,7 @@ public class WikimediaStreamConsumer {
     }
 
     public void consumeStreamAndPublish() {
-        webClient.get().uri("/stream/recentchange").retrieve().bodyToFlux(String.class).subscribe(log::info);
+        //webClient.get().uri("/stream/recentchange").retrieve().bodyToFlux(String.class).subscribe(log::info);
+        webClient.get().uri("/stream/recentchange").retrieve().bodyToFlux(String.class).subscribe(producer::sendMessage);
     }
 }
